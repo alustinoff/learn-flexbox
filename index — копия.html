@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html>
+	<head>
+		<title>Flexbox на практике</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width">
+		<style>
+			body{
+				background: #fefefe; 
+				margin: 0; 
+				padding: 0;
+				font:1em/1.3em Arial, Tahoma, "Trebuchet MS", sans-serif;
+				color: #272727;
+			}
+			img{
+				margin: 0; 
+				padding: 0; 
+				vertical-align: middle; 
+				border: none;
+			}
+			.main{
+				margin: 20px; 
+				border: 1px solid #ccc; 
+				padding: 20px; 
+				background: #fff; 
+				border-radius: 3px;
+			}
+			.bl{
+				padding: 5px 10px; 
+				border:1px solid #ddd; 
+				background: #fffde1; 
+				border-radius: 3px;
+				margin: 20px;
+			}
+			.main{
+				display: flex;
+				max-width: 1000px;
+				margin: 20px auto;
+				/*flex-direction: row;*/
+				justify-content: center;
+				align-items: stretch;
+				/*flex-wrap: wrap;*/
+				align-content: stretch;
+				flex-flow: row wrap;
+			}
+			.bl{
+				flex: 1 1 200px;text-align: center;
+			}
+			.fl1{background: #7c2ddd;order: 5;flex-basis:300px;}
+			.fl2{background: green;order: 3;flex-basis:150px;}
+			.fl3{background: red;order: 1;flex-basis:100%;}
+			.fl4{background: yellow;flex-basis:100%;}
+			.fl5{background: blue; order: 6;flex-basis:300px;}
+			.fl6{background: grey;order: 4;flex-basis:400px;flex-grow: 3;}
+		</style>
+	</head>
+
+	<body>
+	
+		<div class="main">
+			<div class="bl fl1"><b>Подвал 1</b><br>1 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto distinctio iusto voluptatem error, nostrum eveniet corrupti harum voluptatibus blanditiis pariatur.</div>
+			<div class="bl fl2"><b>Левый сайдбар</b><br>2 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus laboriosam perspiciatis, id blanditiis iste consectetur repellendus non, hic aliquam quisquam?</div>
+			<div class="bl fl3"><b>Меню</b><br>3 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dicta, molestias rerum ab ipsum veniam laudantium a vero repellendus numquam nobis!</div>
+			<div class="bl fl4"><b>Шапка</b><br>4 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur aliquam ab dignissimos ducimus, porro ut culpa dolorem tempore aut velit.</div>
+			<div class="bl fl5"><b>Подвал 2</b><br>5 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit, inventore, dolorum? Repellat libero laborum illo distinctio, eligendi officiis. Ipsa, ratione.</div>
+			<div class="bl fl6"><b>Контент</b><br>6 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores, alias soluta. Recusandae rem facere commodi delectus praesentium laboriosam hic vero.</div>
+		</div>
+	
+	</body>
+</html>
